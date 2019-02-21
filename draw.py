@@ -3,7 +3,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.basemap import cm
 
-source = open('D:\QPSUMS\QPESUMS_18082323_q01_18082400.dat','rb').read()
+fn = '/the/path to your/file' #ex: windows- D:\QPSUMS\QPESUMS_18082323_q01_18082400.dat or linux- /home/john/datapool/PESUMS_18082323_q01_18082400.dat
+source = open(fn,'rb').read() 
 source_data = struct.unpack('247401h',source[170:])
 data_resh = np.asarray(source_data).reshape(561,441)
 
